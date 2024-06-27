@@ -6,9 +6,10 @@ export default function Header() {
         <header>
             <div id="logo-container">
                 <img src={logo} id="logo"/>
-                <h1>Meme Generator</h1>
             </div>
-            
+            <div id="project-info-container">
+                <h4>React Course-Project 3</h4>
+            </div>
         </header>
     )
 }
