@@ -23,6 +23,7 @@ main {
 
 #button-container > button {
     width: 100%;
+    cursor: pointer;
 }
 
 #button-container {
@@ -36,6 +37,7 @@ main {
 #form-container input {
     border-radius: 4.91px;
     height: 2.5vh;
+    text-indent: 5px;
 }
 
 #form-container label {
