@@ -1,0 +1,48 @@
+main {
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+}
+
+#text-form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+#top-text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#bottom-text-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#button-container > button {
+    width: 100%;
+}
+
+#button-container {
+    padding-top: 2%;
+}
+
+#form-container {
+    display: flex;
+}
+
+#form-container input {
+    border-radius: 4.91px;
+    height: 2.5vh;
+}
+
+#form-container label {
+    padding-bottom: 1%;
+}
+
+#top-text-container {
+    padding-right: 5%;
+    width: 50%;
+}
