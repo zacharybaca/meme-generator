@@ -1,6 +1,15 @@
 import "./Meme.css";
+import { useState } from "react";
 
 export default function Meme() {
+    // Component State That is Managed By the Meme Component
+    const [memeImage, setMemeImage] = useState("");
+
+    // Function That Will Fire When Get Meme Button is Clicked
+    function getMemeImage() {
+        const randomNumber = Math.floor(Math.random());
+    }
+
     return (
         <main>
             <form id="text-form">
@@ -20,6 +29,7 @@ export default function Meme() {
                     <button>Create New Meme</button>
                 </div>
             </form>
+            /*<img src="#" />*/
         </main>
     )
 }
