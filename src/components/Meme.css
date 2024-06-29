@@ -1,13 +1,18 @@
 main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    max-width: 100%;
     padding-top: 3%;
 }
 
 #text-form {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    max-width: 100%;
+    height: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 #top-text-container {
@@ -49,4 +54,13 @@ main {
 #top-text-container {
     padding-right: 5%;
     width: 50%;
+}
+
+.meme--image {
+    max-width: 100%;
+}
+
+#meme-image-container {
+    display: flex;
+    justify-content: center;
 }
