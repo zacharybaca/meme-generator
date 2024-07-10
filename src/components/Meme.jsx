@@ -2,7 +2,7 @@ import "./Meme.css";
 
 
 export default function Meme(props) {
-    console.log('Props: ', props)
+    
 
     return (
         <main>
