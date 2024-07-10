@@ -26,18 +26,19 @@ export default function Meme() {
             <form id="text-form">
                 <div id="form-container">
                     <div id="top-text-container">
-                        <label htmlFor="top-text">Top Text</label>
-                        <input id="top-text" name="top-text" placeholder="Enter Text For Top of Meme"/>
+                        <input id="top-text" name="top-text" placeholder="Top Text"/>
                     </div>
                     
                     <div id="bottom-text-container">
-                        <label htmlFor="bottom-text">Bottom Text</label>
-                        <input id="bottom-text" name="bottom-text" placeholder="Enter Text For Bottom of Meme"/>
+                        <input id="bottom-text" name="bottom-text" placeholder="Bottom Text"/>
                     </div>
                     
                 </div>
                 <div id="button-container">
-                    <button onClick={getMemeImage}>Create New Meme</button>
+                    <button onClick={getMemeImage}>Save Your Meme</button>
+                </div>
+                <div id="get-new-meme-button-container">
+                    <button>Get New Meme Image</button>
                 </div>
             </form>
             <div id="meme-image-container">
