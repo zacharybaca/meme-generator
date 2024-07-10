@@ -2,6 +2,7 @@ import './App.css'
 import React from "react";
 import Header from "./components/Header";
 import Meme from "./components/Meme";
+import Footer from "./components/Footer";
 
 function App() {
   // Set-up State for Getting Single Meme
@@ -34,13 +35,13 @@ function App() {
 
     // Get Random Meme Image
     const memeImg = allMemes[randomNumber].url;
-
+    
     // Set Meme Image to Random URL
     setMeme(prevState => ({
       ...prevState,
       url: memeImg
     }));
-    console.log('Random URL: ', meme)
+  
 }
 
 // Function to Incorporate Input State Within React
@@ -59,6 +60,7 @@ function handleChange(event) {
     <div id="app-container">
       <Header />
       <Meme getMeme={getMemeImage} meme={meme} handleChange={handleChange}/>
+      <Footer />
     </div>
   )
 }
