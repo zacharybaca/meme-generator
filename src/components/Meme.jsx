@@ -1,13 +1,8 @@
 import "./Meme.css";
-import { useState } from "react";
-import memesData from "../memesData.js";
+
 
 export default function Meme(props) {
-    // Component State That is Managed By the Meme Component
-    const [memeImage, setMemeImage] = useState("");
-
     
-
     return (
         <main>
             <form id="text-form">
