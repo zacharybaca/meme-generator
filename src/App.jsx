@@ -26,8 +26,8 @@ function App() {
   }, [])
 
   // Function That Will Fire When Get Meme Button is Clicked
-  function getMemeImage() {
-    
+  function getMemeImage(event) {
+    event.preventDefault();
     // Create Random Number That is Less Than Length of memesArray
     // To Pick Random URL
     const randomNumber = Math.floor(Math.random() * allMemes.length);
