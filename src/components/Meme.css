@@ -83,13 +83,19 @@ main hr {
     padding-bottom: 1%;
 }
 
+#meme-image-container img {
+    max-width: 50%;
+    max-height: 100%;
+}
+
 .meme-text {
     position: absolute;
-    width: 80%;
+    word-break: break-all;
+    width: 15%;
     text-align: center;
     left: 50%;
     transform: translateX(-50%);
-    margin: 15px 0;
+    margin: 20px 0;
     padding: 0 5px;
     font-family: impact, sans-serif;
     font-size: 2em;
