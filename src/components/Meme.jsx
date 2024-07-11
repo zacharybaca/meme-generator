@@ -31,7 +31,7 @@ export default function Meme(props) {
                     
                 </div>
                 <div id="button-container">
-                    <button>Save Your Meme</button>
+                    <button onClick={props.save}>Save Your Meme</button>
                 </div>
                 <div id="get-new-meme-button-container">
                     <button onClick={props.getMeme}>Get New Meme Image</button>
@@ -42,6 +42,7 @@ export default function Meme(props) {
                 <h2 className="meme-text top">{props.meme.topText}</h2>
                 <h2 className="meme-text bottom">{props.meme.bottomText}</h2>
             </div>
+            <hr />
         </main>
     )
 }

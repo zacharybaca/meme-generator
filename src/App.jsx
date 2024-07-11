@@ -3,6 +3,7 @@ import React from "react";
 import Header from "./components/Header";
 import Meme from "./components/Meme";
 import Footer from "./components/Footer";
+import SavedMemes from "./components/SavedMemes";
 
 function App() {
   // Set-up State for Getting Single Meme
@@ -14,6 +15,31 @@ function App() {
 
   // Set-up State for Getting all Memes from API
   const [allMemes, setAllMemes] = React.useState();
+
+  // Set-up State for Saved Memes
+  const [savedMemes, setSavedMemes] = React.useState([]);
+
+  // Function That Will Save Memes To savedMemes State
+  function saveMeme(event) {
+    event.preventDefault();
+
+    setSavedMemes(prevState => ([
+      ...prevState,
+      {
+        topText: meme.topText,
+        bottomText: meme.bottomText,
+        url: meme.url
+      }
+    ]))
+
+    setMeme(prevState => ({
+      ...prevState,
+      topText: "",
+      bottomText: ""
+    }))
+
+    console.log('SAVED: ', savedMemes)
+  }
 
   // Get Memes From API and Save to allMemes
   React.useEffect(() => {
@@ -59,7 +85,14 @@ function handleChange(event) {
   return (
     <div id="app-container">
       <Header />
-      <Meme getMeme={getMemeImage} meme={meme} handleChange={handleChange}/>
+      <Meme 
+        getMeme={getMemeImage} 
+        meme={meme} 
+        save={saveMeme}
+        handleChange={handleChange}
+      />
+      {savedMemes.length !== 0 && <h1 id="saved-heading">Saved Memes</h1>}
+      <SavedMemes saved={savedMemes}/>
       <Footer />
     </div>
   )

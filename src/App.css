@@ -2,4 +2,14 @@
     display: flex;
     flex-direction: column;
     max-width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+#saved-heading {
+    display: flex;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 25px;
+    padding-bottom: 1%;
 }
