@@ -45,7 +45,6 @@ function App() {
   
   // Function That Will Delete a Meme
   function deleteMeme(memeId) {
-    console.log('MemeID: ', memeId)
     let updatedMemeList = savedMemes.filter((meme) => meme.id !== memeId);
     setSavedMemes(updatedMemeList);
   }
