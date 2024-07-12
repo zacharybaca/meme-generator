@@ -4,10 +4,12 @@ import Header from "./components/Header";
 import Meme from "./components/Meme";
 import Footer from "./components/Footer";
 import SavedMemes from "./components/SavedMemes";
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
   // Set-up State for Getting Single Meme
   const [meme, setMeme] = React.useState({
+    id: uuidv4(),
     topText: "",
     bottomText: "",
     url: "http://i.imgflip.com/1bij.jpg" 
@@ -26,19 +28,26 @@ function App() {
     setSavedMemes(prevState => ([
       ...prevState,
       {
+        id: meme.id,
         topText: meme.topText,
         bottomText: meme.bottomText,
         url: meme.url
       }
     ]))
-
+    
     setMeme(prevState => ({
       ...prevState,
+      id: uuidv4(),
       topText: "",
       bottomText: ""
     }))
-
-    console.log('SAVED: ', savedMemes)
+  }
+  
+  // Function That Will Delete a Meme
+  function deleteMeme(memeId) {
+    console.log('MemeID: ', memeId)
+    let updatedMemeList = savedMemes.filter((meme) => meme.id !== memeId);
+    setSavedMemes(updatedMemeList);
   }
 
   // Get Memes From API and Save to allMemes
@@ -92,7 +101,10 @@ function handleChange(event) {
         handleChange={handleChange}
       />
       {savedMemes.length !== 0 && <h1 id="saved-heading">Saved Memes</h1>}
-      <SavedMemes saved={savedMemes}/>
+      <SavedMemes 
+        saved={savedMemes}
+        delete={deleteMeme}
+      />
       <Footer />
     </div>
   )

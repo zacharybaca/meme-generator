@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import "./SavedMemes.css";
-import { v4 as uuidv4 } from "uuid";
+
 
 export default function SavedMemes(props) {
     return (
@@ -11,7 +11,7 @@ export default function SavedMemes(props) {
             <ul id="saved-memes-list">
                 {props.saved.map((meme) => {
                     return (
-                        <li key={uuidv4()} className="meme-item">
+                        <li key={meme.id} className="meme-item">
                             <div id="saved-meme-image-container">
                                 <img src={meme.url} className="saved--meme--image" />
                                 <h2 className="saved-meme-text save-top">{meme.topText}</h2>
@@ -19,7 +19,7 @@ export default function SavedMemes(props) {
                             </div>
                             <div id="action-buttons">
                                 <button>Edit</button>
-                                <button>Delete</button>
+                                <button onClick={() => props.delete(meme.id)}>Delete</button>
                             </div>
                         </li>
                     )
