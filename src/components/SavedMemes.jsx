@@ -18,7 +18,7 @@ export default function SavedMemes(props) {
                                 <h2 className="saved-meme-text save-bottom">{meme.bottomText}</h2>
                             </div>
                             <div id="action-buttons">
-                                <button>Edit</button>
+                                <button onClick={() => {props.get(meme.id)}}>Edit</button>
                                 <button onClick={() => props.delete(meme.id)}>Delete</button>
                             </div>
                         </li>

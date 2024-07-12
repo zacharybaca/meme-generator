@@ -50,6 +50,21 @@ function App() {
     setSavedMemes(updatedMemeList);
   }
 
+  // Function That Will Find a Meme, If It Exists
+  function getSavedMeme(memeId) {
+    let found = savedMemes.find((meme) => meme.id === memeId);
+
+    if (found) {
+      setMeme({
+        id: found.id,
+        topText: found.topText,
+        bottomText: found.bottomText,
+        url: found.url
+      })
+      deleteMeme(found.id);
+    }
+  }
+
   // Get Memes From API and Save to allMemes
   React.useEffect(() => {
     async function getMemes ()  {
@@ -104,6 +119,7 @@ function handleChange(event) {
       <SavedMemes 
         saved={savedMemes}
         delete={deleteMeme}
+        get={getSavedMeme}
       />
       <Footer />
     </div>
