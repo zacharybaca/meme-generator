@@ -12,7 +12,7 @@ function App() {
     id: uuidv4(),
     topText: "",
     bottomText: "",
-    url: "http://i.imgflip.com/1bij.jpg" 
+    url: "https://i.imgflip.com/1wz1x.jpg" 
   });
 
   // Set-up State for Getting all Memes from API
