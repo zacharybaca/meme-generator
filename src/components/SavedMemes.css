@@ -40,7 +40,7 @@
 
 .saved-meme-text {
     position: absolute;
-    word-break: break-all;
+    word-break: break-word;
     width: 15%;
     text-align: center;
     left: 50%;
